@@ -13,27 +13,18 @@ namespace LegacyApp
             _clientRepository = clientRepository;
             _creditLimitService = creditLimitService;
         }
+        [Obsolete]
+        public UserService()
+        {
+            _clientRepository = new ClientRepository();
+            _creditLimitService = new UserCreditService();
+        }
+
         public bool AddUser(string firstName, string lastName, string email, DateTime dateOfBirth, int clientId)
         {
             //Logika biznesowa - walidacja
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
-            {
+            if (!Validator.FullClientDataValidation(firstName, lastName, email, dateOfBirth))
                 return false;
-            }
-            //Logika biznesowa - walidacja
-            if (!email.Contains("@") && !email.Contains("."))
-            {
-                return false;
-            }
-            //Logika biznesowa - wiek
-            var now = DateTime.Now;
-            int age = now.Year - dateOfBirth.Year;
-            if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) age--;
-
-            if (age < 21)
-            {
-                return false;
-            }
             //Infrastruktura
             //var clientRepository = new ClientRepository();
             var client = _clientRepository.GetById(clientId);
@@ -47,33 +38,34 @@ namespace LegacyApp
                 LastName = lastName
             };
             //Logika biznesowa + Infrastruktura - walidacja
-            if (client.Type == "VeryImportantClient")
+            switch (client.Type)
             {
-                user.HasCreditLimit = false;
-            }
-            else if (client.Type == "ImportantClient")
-            {
-                using (var userCreditService = new UserCreditService())
+                case "VeryImportantClient":
+                {
+                    user.HasCreditLimit = false;
+                    break;
+                }
+                
+                case "ImportantClient":
                 {
                     int creditLimit = _creditLimitService.GetCreditLimit(user.LastName, user.DateOfBirth);
                     creditLimit = creditLimit * 2;
-                    user.CreditLimit = creditLimit;
+                    user.CreditLimit = creditLimit;   
+                    break;
                 }
-            }
-            else
-            {
-                user.HasCreditLimit = true;
-                using (var userCreditService = new UserCreditService())
+                    
+                default:
                 {
+                    user.HasCreditLimit = true;
                     int creditLimit = _creditLimitService.GetCreditLimit(user.LastName, user.DateOfBirth);
                     user.CreditLimit = creditLimit;
+                    break;
                 }
             }
+            _creditLimitService.Dispose();
             //Logika biznesowa - walidacja
-            if (user.HasCreditLimit && user.CreditLimit < 500)
-            {
+            if (Validator.UserCreditValidation(user))
                 return false;
-            }
             //Infrastruktura
             UserDataAccess.AddUser(user);
             return true;
@@ -85,7 +77,7 @@ namespace LegacyApp
         Client GetById(int clientId);
     }
 
-    public interface ICreditLimitService
+    public interface ICreditLimitService: IDisposable
     {
         int GetCreditLimit(string lastName, DateTime dateOfBirth);
     }

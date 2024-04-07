@@ -35,3 +35,4 @@ D:\APBD\Cwiczenie3\zadanie\LegacyAppConsumer\obj\Debug\net8.0\refint\LegacyAppCo
 D:\APBD\Cwiczenie3\zadanie\LegacyAppConsumer\obj\Debug\net8.0\LegacyAppConsumer.pdb
 D:\APBD\Cwiczenie3\zadanie\LegacyAppConsumer\obj\Debug\net8.0\LegacyAppConsumer.genruntimeconfig.cache
 D:\APBD\Cwiczenie3\zadanie\LegacyAppConsumer\obj\Debug\net8.0\ref\LegacyAppConsumer.dll
+D:\APBD\Cwiczenie3\zadanie\LegacyAppConsumer\obj\Debug\net8.0\LegacyAppConsumer.sourcelink.json

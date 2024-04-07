@@ -105,3 +105,4 @@ D:\APBD\Cwiczenie3\zadanie\LegacyAppTests\obj\Debug\net8.0\refint\LegacyAppTests
 D:\APBD\Cwiczenie3\zadanie\LegacyAppTests\obj\Debug\net8.0\LegacyAppTests.pdb
 D:\APBD\Cwiczenie3\zadanie\LegacyAppTests\obj\Debug\net8.0\LegacyAppTests.genruntimeconfig.cache
 D:\APBD\Cwiczenie3\zadanie\LegacyAppTests\obj\Debug\net8.0\ref\LegacyAppTests.dll
+D:\APBD\Cwiczenie3\zadanie\LegacyAppTests\obj\Debug\net8.0\LegacyAppTests.sourcelink.json
