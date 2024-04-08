@@ -6,7 +6,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1a24a670_002D049f_002D4cde_002Db3b8_002D8ea2174c5b92/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AddUser_Should_Throw_Exception_When_User_Does_Not_Exist #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5037c32f_002D5477_002D4063_002D9b6d_002D3c5cb67985cb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5037c32f_002D5477_002D4063_002D9b6d_002D3c5cb67985cb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	
@@ -15,7 +15,7 @@
     &lt;TestId&gt;xUnit::E6B1BC95-6F28-4F36-9E03-24AFA69E8F09::net8.0::LegacyAppTests.UserServiceTests.AddUser_Should_Throw_Exception_When_User_Does_Not_Exist&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ed6cdb2c_002Dcf8d_002D4282_002D8988_002D8fc9a6e7dbbd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ed6cdb2c_002Dcf8d_002D4282_002D8988_002D8fc9a6e7dbbd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

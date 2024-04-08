@@ -11,7 +11,7 @@
             Type = "Normal";
         }
 
-        public Client(string type)
+        public Client(string type):this()
         {
             Type = type;
         }
